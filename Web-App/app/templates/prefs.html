@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sickflix | Your Preferences</title>
+    </head>
+    <body>
+        <header>
+            <h3>Welcome to</h3>
+            <h1>Sickflix</h1>
+            <h2>Get Instant Movie Recommendations</h2>
+        </header>
+        <main>
+            <form action='/preferences', method="POST">
+                <p>Rate the following movies (0 if not seen)</p>
+                {% for movie in movies %}
+                    <label for="{{ movie }}">{{ movie }}</label>
+                    <input id="{{ movie }}" name="{{ movie }}" type="range" min="0" max="5" step="1" value="0"><br>
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
