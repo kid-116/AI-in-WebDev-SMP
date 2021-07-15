@@ -3,20 +3,31 @@
     <head>
         <meta charset="utf-8">
         <title>Sickflix | Your Preferences</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     </head>
+    <style>
+        h1 {
+            font-size: 40px;
+        }
+        header {
+            padding: 10px;
+        }
+    </style>
     <body>
         <header>
-            <h3>Welcome to</h3>
             <h1>Sickflix</h1>
-            <h2>Get Instant Movie Recommendations</h2>
         </header>
         <main>
-            <form action='/preferences', method="POST">
+            <form action='/preferences', method="POST" class="site-form">
                 <p>Rate the following movies (0 if not seen)</p>
-                {% for movie in movies %}
-                    <label for="{{ movie }}">{{ movie }}</label>
-                    <input id="{{ movie }}" name="{{ movie }}" type="range" min="0" max="5" step="1" value="0"><br>
-                {% endfor %}
+                <table>
+                    {% for movie in movies %}
+                        <tr>
+                            <th><label for="{{ movie }}">{{ movie }}</label></th>
+                            <td><input id="{{ movie }}" name="{{ movie }}" type="number" min="0" max="5" step="1" value="0"></td>
+                        </tr>
+                    {% endfor %}
+                </table>
                 <button type="submit">Submit</button>
             </form>
         </main>

@@ -3,12 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Sickflix</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     </head>
+    <style>
+        h1 {
+            font-size: 40px;
+        }
+        header {
+            padding: 10px;
+        }
+    </style>
     <body>
         <header>
-            <h3>Welcome to</h3>
             <h1>Sickflix</h1>
-            <h2>Get Instant Movie Recommendations</h2>
         </header>
         <main>
             <ol>
@@ -20,7 +27,7 @@
         </main>
         <nav>
             <ul>
-                <li><a href="{{ url_for('landing') }}">Wanna try again?</a></li>
+                <li><a href="{{ url_for('landing') }}">Try again</a></li>
             </ul>
         </nav>
     </body>

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Sickflix</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
     </head>
     <body>
         <header>
@@ -12,7 +13,12 @@
         </header>
         <nav>
             <ul>
-                <li><a href="{{ url_for('get_prefs') }}">Proceed</a></li>
+                <li><a href="{{ url_for('get_prefs') }}">
+                    <div class="play-btn">
+                        <div class="tri1"></div>
+                        <div class="tri2"></div>
+                    </div>
+                </a></li>
             </ul>
         </nav>
     </body>
