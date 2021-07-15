@@ -22,6 +22,8 @@ def predict(input_ratings):
     input_ratings = np.array([[input_ratings]])
 
     ratings = np.hstack((ratings, input_ratings))
+    
+    data.ratings = ratings
 
     movies = tf.Variable(V, dtype=tf.float64)
     users  = tf.Variable(np.random.rand(user_count + 1,k), dtype=tf.float64)
