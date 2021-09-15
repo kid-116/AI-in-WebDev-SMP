@@ -1,3 +1,3 @@
 # AI-in-WebDev-SMP
-## Final Web-APP
-- https://kidd116-sickflix.herokuapp.com/
+## Final Web-App
+- https://kid116-sickflix.herokuapp.com/
